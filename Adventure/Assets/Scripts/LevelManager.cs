@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     public Vector3 respawnPoint;
     
     public Action camSnap;
+    public int currentCoins;
     
     private void Awake()
     {
@@ -54,5 +55,12 @@ public class LevelManager : MonoBehaviour
         UIController.instance.FadeFromBlack();
         
         PlayerHealthController.instance.FillHealth();
+    }
+
+    public void GetCoin()
+    {
+        currentCoins++;
+
+        UIController.instance.coinText.text = currentCoins.ToString();
     }
 }

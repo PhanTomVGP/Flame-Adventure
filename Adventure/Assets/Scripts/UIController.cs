@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour
 
     public Slider healthSlider;
     public TMP_Text healthText;
+    public TMP_Text coinText;
 
     private void Awake()
     {
